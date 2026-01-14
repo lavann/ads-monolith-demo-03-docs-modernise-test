@@ -105,7 +105,7 @@ builder.Services.AddScoped<IPaymentGateway, MockPaymentGateway>();
 
 ### Usage in CheckoutService
 
-`Services/CheckoutService .cs` (lines 35-36):
+`Services/CheckoutService.cs` (lines 35-36):
 
 ```csharp
 var pay = await _payments.ChargeAsync(new(total, "GBP", paymentToken), ct);
@@ -327,4 +327,4 @@ To replace with real payment gateway (e.g., Stripe):
 - [PCI Compliance Overview](https://www.pcisecuritystandards.org/)
 - `Services/IPaymentGateway.cs` - Interface definition
 - `Services/MockPaymentGateway.cs` - Mock implementation
-- `Services/CheckoutService .cs` - Gateway usage
+- `Services/CheckoutService.cs` - Gateway usage

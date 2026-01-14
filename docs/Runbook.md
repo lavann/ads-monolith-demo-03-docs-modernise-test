@@ -441,7 +441,7 @@ dotnet run
 **Fix:** Remove inline cart logic (lines 32-48), rely solely on `CartService`.
 
 #### 2. Inventory Race Conditions
-**Location:** `Services/CheckoutService .cs` lines 27-32
+**Location:** `Services/CheckoutService.cs` lines 27-32
 
 **Problem:** Optimistic concurrency during checkout. If two users checkout simultaneously, inventory may be oversold (both read quantity, both decrement, both save).
 

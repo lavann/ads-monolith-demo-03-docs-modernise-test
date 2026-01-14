@@ -408,7 +408,7 @@ Client → GET /api/orders/{id}
    - **Fix Needed:** Remove inline cart logic, rely solely on service
 
 2. **CheckoutService Cross-Domain Coupling**
-   - **Location:** `Services/CheckoutService .cs`
+   - **Location:** `Services/CheckoutService.cs`
    - **Issue:** Single service knows about and manipulates 5+ entity types (Cart, CartLine, InventoryItem, Order, OrderLine)
    - **Impact:** God service anti-pattern, difficult to test and maintain
    - **Risk:** Changes to any domain model ripple through checkout logic
