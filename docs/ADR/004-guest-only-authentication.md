@@ -342,4 +342,4 @@ This ADR explicitly documents that **guest-only mode is a temporary, demo-only d
 - `Models/Cart.cs` - CustomerId default value
 - `Models/Order.cs` - CustomerId default value
 - `Services/CartService.cs` - Hardcoded "guest" usage
-- `Services/CheckoutService .cs` - Hardcoded "guest" usage
+- `Services/CheckoutService.cs` - Hardcoded "guest" usage

@@ -192,7 +192,7 @@ public interface ICheckoutService
 }
 ```
 
-**`CheckoutService` (Services/CheckoutService .cs)**
+**`CheckoutService` (Services/CheckoutService.cs)**
 - **Dependencies:** `AppDbContext`, `IPaymentGateway`
 - **Scope:** Registered as Scoped in DI container
 
