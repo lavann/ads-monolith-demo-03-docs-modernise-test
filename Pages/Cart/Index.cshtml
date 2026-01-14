@@ -1,0 +1,31 @@
+﻿@page
+@model RetailMonolith.Pages.Cart.IndexModel
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+
+<h2>Your Cart</h2>
+
+@if (!Model.Lines.Any())
+{
+    <p> Cart is empty.</p>
+}
+else
+{
+    <table class="table">
+        <thead><tr><th>Item</th><th>Quantity</th><th>Unit</th><th>Line</th></tr></thead>
+        <tbody>
+            @foreach (var line in Model.Lines)
+        {
+            <tr>
+                <td>@line.Name</td>
+                <td>@line.Quantity</td>
+                <td>@line.Price.ToString("c")</td>
+            </tr>
+            }
+
+    </table>
+    <h4>Total: @Model.Total.ToString("C")</h4>
+    <a class="btn btn-success" href="/Checkout"> Proceed to Checkout</a>
+}
